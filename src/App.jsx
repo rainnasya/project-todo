@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Todos from './components/Todo'
 import './App.css'
 
 function App() {
@@ -26,9 +27,7 @@ function App() {
   return (
     <div>
       <h1>My Todo List</h1>
-      {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>
-      })}
+      <Todos todos={todos} />
     </div>
   )
 }
